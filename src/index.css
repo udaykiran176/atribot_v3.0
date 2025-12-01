@@ -6,69 +6,71 @@
 
 @layer base {
   :root {
-    --background: 220 50% 3%;
-    --foreground: 210 40% 98%;
+    --background: 200 30% 96%;
+    --foreground: 220 50% 15%;
 
-    --card: 220 40% 6%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 50% 15%;
 
-    --popover: 220 40% 6%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 50% 15%;
 
-    --primary: 214 100% 59%;
-    --primary-foreground: 220 50% 3%;
+    --primary: 214 100% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 160 89% 55%;
-    --secondary-foreground: 220 50% 3%;
+    --secondary: 160 85% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 30% 12%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 200 20% 90%;
+    --muted-foreground: 220 30% 40%;
 
-    --accent: 160 89% 55%;
-    --accent-foreground: 220 50% 3%;
+    --accent: 280 75% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 15%;
-    --input: 220 30% 15%;
-    --ring: 214 100% 59%;
+    --border: 200 25% 85%;
+    --input: 200 25% 85%;
+    --ring: 214 100% 55%;
 
     --radius: 1rem;
 
-    /* Custom Atribot Colors */
-    --atribot-blue: 214 100% 59%;
-    --atribot-dark: 220 50% 3%;
-    --atribot-neon: 160 89% 55%;
-    --atribot-yellow: 45 100% 70%;
-    --atribot-purple: 270 80% 65%;
-    --atribot-cyan: 190 90% 60%;
+    /* Custom Atribot Colors - Bright & Playful */
+    --atribot-blue: 214 100% 55%;
+    --atribot-dark: 220 50% 15%;
+    --atribot-neon: 160 85% 50%;
+    --atribot-yellow: 45 100% 55%;
+    --atribot-purple: 280 75% 60%;
+    --atribot-cyan: 190 85% 50%;
+    --atribot-orange: 25 95% 55%;
+    --atribot-pink: 330 85% 60%;
 
-    /* Level Colors */
-    --level-1: 214 100% 59%;
-    --level-2: 160 89% 55%;
-    --level-3: 45 100% 70%;
-    --level-4: 270 80% 65%;
-    --level-5: 0 100% 65%;
+    /* Level Colors - Vibrant */
+    --level-1: 214 100% 55%;
+    --level-2: 160 85% 50%;
+    --level-3: 45 100% 55%;
+    --level-4: 280 75% 60%;
+    --level-5: 0 100% 60%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 40% 8%) 0%, hsl(220 40% 4%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.3) 0%, transparent 50%);
+    /* Gradients - Colorful */
+    --gradient-hero: linear-gradient(135deg, hsl(214 100% 55%) 0%, hsl(280 75% 60%) 50%, hsl(160 85% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(200 30% 98%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.2) 0%, transparent 50%);
 
-    /* Shadows */
-    --shadow-glow: 0 0 60px hsl(var(--primary) / 0.3);
-    --shadow-neon: 0 0 20px hsl(var(--secondary) / 0.5);
-    --shadow-card: 0 10px 40px -10px hsl(220 50% 0% / 0.5);
+    /* Shadows - Colorful */
+    --shadow-glow: 0 10px 40px hsl(var(--primary) / 0.25);
+    --shadow-neon: 0 5px 25px hsl(var(--secondary) / 0.3);
+    --shadow-card: 0 4px 20px hsl(220 20% 50% / 0.1);
 
-    --sidebar-background: 220 40% 6%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 214 100% 59%;
-    --sidebar-primary-foreground: 220 50% 3%;
-    --sidebar-accent: 220 30% 12%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 220 30% 15%;
-    --sidebar-ring: 214 100% 59%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 50% 15%;
+    --sidebar-primary: 214 100% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 200 20% 90%;
+    --sidebar-accent-foreground: 220 50% 15%;
+    --sidebar-border: 200 25% 85%;
+    --sidebar-ring: 214 100% 55%;
   }
 
   .dark {
