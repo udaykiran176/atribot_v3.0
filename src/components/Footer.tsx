@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+"use client";
+import Link from 'next/link';
 import { Bot, Mail, Phone, MapPin } from 'lucide-react';
 import atribotLogo from '@/assets/atribot-logo.png';
 
@@ -22,10 +23,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-display font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/courses" className="hover:text-primary transition-colors">Courses</Link></li>
-              <li><Link to="/kit_activation" className="hover:text-primary transition-colors">Activate Kit</Link></li>
-              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/courses" className="hover:text-primary transition-colors">Courses</Link></li>
+              <li><Link href="/kit_activation" className="hover:text-primary transition-colors">Activate Kit</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

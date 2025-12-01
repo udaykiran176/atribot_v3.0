@@ -1,4 +1,6 @@
-import { Link, useLocation } from 'react-router-dom';
+"use client";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Bot, Menu, X, User, LogOut } from 'lucide-react';
 import { useState } from 'react';
@@ -13,7 +15,7 @@ export const Navbar = ({
   onLogout
 }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const navLinks = isAuthenticated ? [{
     href: '/dashboard',
     label: 'Dashboard'
@@ -34,14 +36,14 @@ export const Navbar = ({
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={atribotLogo} alt="Atribot" className="w-10 h-10" />
+          <Link href="/" className="flex items-center gap-2">
+            <img src={(typeof atribotLogo === 'string' ? atribotLogo : (atribotLogo as any).src)} alt="Atribot" className="w-10 h-10" />
             <span className="font-display text-xl font-bold text-primary">Atribot </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => <Link key={link.href} to={link.href} className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.href ? 'text-primary' : 'text-muted-foreground'}`}>
+            {navLinks.map(link => <Link key={link.href} href={link.href} className={`text-sm font-medium transition-colors hover:text-primary ${pathname === link.href ? 'text-primary' : 'text-muted-foreground'}`}>
                 {link.label}
               </Link>)}
           </div>
@@ -50,7 +52,7 @@ export const Navbar = ({
           <div className="hidden md:flex items-center gap-4">
             {isAuthenticated ? <>
                 <Button variant="ghost" size="icon" asChild>
-                  <Link to="/profile">
+                  <Link href="/profile">
                     <User className="w-5 h-5" />
                   </Link>
                 </Button>
@@ -60,10 +62,10 @@ export const Navbar = ({
                 </Button>
               </> : <>
                 <Button variant="ghost" asChild>
-                  <Link to="/login">Login</Link>
+                  <Link href="/login">Login</Link>
                 </Button>
                 <Button variant="hero" asChild>
-                  <Link to="/kit_activation">Activate Kit</Link>
+                  <Link href="/kit_activation">Activate Kit</Link>
                 </Button>
               </>}
           </div>
@@ -88,11 +90,11 @@ export const Navbar = ({
         height: 0
       }} className="md:hidden bg-card border-b border-border">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              {navLinks.map(link => <Link key={link.href} to={link.href} className="text-foreground hover:text-primary py-2" onClick={() => setIsMenuOpen(false)}>
+              {navLinks.map(link => <Link key={link.href} href={link.href} className="text-foreground hover:text-primary py-2" onClick={() => setIsMenuOpen(false)}>
                   {link.label}
                 </Link>)}
               {!isAuthenticated && <Button variant="hero" className="w-full" asChild>
-                  <Link to="/kit_activation">Activate Kit</Link>
+                  <Link href="/kit_activation">Activate Kit</Link>
                 </Button>}
             </div>
           </motion.div>}

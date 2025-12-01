@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/courses/page": "/admin/courses",
+  "/admin/license/page": "/admin/license",
+  "/admin/page": "/admin",
+  "/courses/[slug]/lesson/[lessonId]/page": "/courses/[slug]/lesson/[lessonId]",
+  "/courses/[slug]/page": "/courses/[slug]",
+  "/courses/page": "/courses",
+  "/dashboard/page": "/dashboard",
+  "/kit_activation/page": "/kit_activation",
+  "/login/page": "/login",
+  "/page": "/",
+  "/profile/page": "/profile"
+}

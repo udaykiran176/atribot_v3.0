@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+"use client";
+import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { LevelBadge } from './LevelBadge';
@@ -84,7 +85,7 @@ export const CourseCard = ({
 
         <CardFooter>
           <Button className="w-full" variant="outline" asChild>
-            <Link to={`/courses/${slug}`}>
+            <Link href={`/courses/${slug}`}>
               Start Learning
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>

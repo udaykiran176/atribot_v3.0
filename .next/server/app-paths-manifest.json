@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/courses/page": "app/admin/courses/page.js",
+  "/admin/license/page": "app/admin/license/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/courses/[slug]/lesson/[lessonId]/page": "app/courses/[slug]/lesson/[lessonId]/page.js",
+  "/courses/[slug]/page": "app/courses/[slug]/page.js",
+  "/courses/page": "app/courses/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/kit_activation/page": "app/kit_activation/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js"
+}
