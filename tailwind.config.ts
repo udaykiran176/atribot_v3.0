@@ -63,11 +63,8 @@ export default {
         },
         atribot: {
           blue: "hsl(var(--atribot-blue))",
-          dark: "hsl(var(--atribot-dark))",
-          neon: "hsl(var(--atribot-neon))",
-          yellow: "hsl(var(--atribot-yellow))",
-          purple: "hsl(var(--atribot-purple))",
-          cyan: "hsl(var(--atribot-cyan))",
+          black: "hsl(var(--atribot-black))",
+          white: "hsl(var(--atribot-white))",
         },
         level: {
           1: "hsl(var(--level-1))",
@@ -75,6 +72,16 @@ export default {
           3: "hsl(var(--level-3))",
           4: "hsl(var(--level-4))",
           5: "hsl(var(--level-5))",
+        },
+        rainbow: {
+          red: "hsl(var(--color-red))",
+          orange: "hsl(var(--color-orange))",
+          yellow: "hsl(var(--color-yellow))",
+          green: "hsl(var(--color-green))",
+          blue: "hsl(var(--color-blue))",
+          purple: "hsl(var(--color-purple))",
+          pink: "hsl(var(--color-pink))",
+          black: "hsl(var(--color-black))",
         },
       },
       borderRadius: {

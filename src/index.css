@@ -6,62 +6,67 @@
 
 @layer base {
   :root {
-    --background: 40 35% 92%;
-    --foreground: 220 50% 10%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 50% 10%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 50% 10%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 200 85% 50%;
+    --primary: 210 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 18 100% 65%;
+    --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 25% 85%;
-    --muted-foreground: 220 30% 35%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 35 100% 70%;
-    --accent-foreground: 220 50% 10%;
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 80%;
-    --input: 40 20% 80%;
-    --ring: 200 85% 50%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 210 100% 50%;
 
     --radius: 1rem;
 
-    /* Custom Atribot Colors - Matching Image */
-    --atribot-blue: 200 85% 50%;
-    --atribot-dark: 220 50% 10%;
-    --atribot-orange: 18 100% 65%;
-    --atribot-cream: 40 35% 92%;
-    --atribot-yellow: 45 100% 70%;
-    --atribot-purple: 280 75% 60%;
-    --atribot-cyan: 190 85% 50%;
-    --atribot-pink: 330 85% 70%;
+    /* Main Theme - Blue, Black, White */
+    --atribot-blue: 210 100% 50%;
+    --atribot-black: 0 0% 5%;
+    --atribot-white: 0 0% 100%;
 
-    /* Level Colors - Kid-Friendly */
-    --level-1: 200 85% 50%;
-    --level-2: 18 100% 65%;
-    --level-3: 45 100% 70%;
-    --level-4: 280 75% 60%;
-    --level-5: 330 85% 70%;
+    /* Level Colors - Rainbow */
+    --level-1: 0 85% 55%;
+    --level-2: 25 95% 55%;
+    --level-3: 45 100% 55%;
+    --level-4: 140 70% 45%;
+    --level-5: 210 100% 50%;
 
-    /* Gradients - Playful */
-    --gradient-hero: linear-gradient(135deg, hsl(200 85% 50%) 0%, hsl(18 100% 65%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(40 35% 96%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.2) 0%, transparent 50%);
+    /* Additional Rainbow Colors for Cards */
+    --color-red: 0 85% 55%;
+    --color-orange: 25 95% 55%;
+    --color-yellow: 45 100% 55%;
+    --color-green: 140 70% 45%;
+    --color-blue: 210 100% 50%;
+    --color-purple: 270 75% 60%;
+    --color-pink: 330 85% 60%;
+    --color-black: 0 0% 10%;
 
-    /* Shadows - Playful */
-    --shadow-glow: 0 10px 40px hsl(var(--primary) / 0.25);
-    --shadow-neon: 0 5px 25px hsl(var(--secondary) / 0.3);
-    --shadow-card: 0 4px 20px hsl(220 20% 50% / 0.1);
+    /* Gradients - Clean */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 50%) 0%, hsl(0 0% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.15) 0%, transparent 50%);
+
+    /* Shadows - Clean */
+    --shadow-glow: 0 8px 32px hsl(var(--primary) / 0.2);
+    --shadow-neon: 0 4px 20px hsl(0 0% 0% / 0.1);
+    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.08);
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 220 50% 15%;
