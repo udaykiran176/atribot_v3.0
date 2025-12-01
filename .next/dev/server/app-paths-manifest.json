@@ -1,7 +1,9 @@
 {
+  "/(marketing)/contact/page": "app/(marketing)/contact/page.js",
+  "/(marketing)/kit_activation/page": "app/(marketing)/kit_activation/page.js",
+  "/(marketing)/page": "app/(marketing)/page.js",
+  "/(marketing)/store/page": "app/(marketing)/store/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/courses/page": "app/courses/page.js",
-  "/kit_activation/page": "app/kit_activation/page.js",
-  "/login/page": "app/login/page.js",
-  "/page": "app/page.js"
+  "/login/page": "app/login/page.js"
 }

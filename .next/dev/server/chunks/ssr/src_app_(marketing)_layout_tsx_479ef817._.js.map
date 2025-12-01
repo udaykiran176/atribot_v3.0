@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/web%20apps/Atribot_3.0/atribot-robotics-academy/src/app/%28marketing%29/layout.tsx"],"sourcesContent":["import type { PropsWithChildren } from \"react\";\n\nconst MarketingLayout = ({ children }: PropsWithChildren) => {\n  return (\n    <div className=\"flex min-h-screen flex-col\">\n      \n      <main className=\"flex flex-1 flex-col items-center justify-center\">\n        {children}\n      </main>\n\n    </div>\n  );\n};\n\nexport default MarketingLayout;\n"],"names":[],"mappings":";;;;;;AAEA,MAAM,kBAAkB,CAAC,EAAE,QAAQ,EAAqB;IACtD,qBACE,8OAAC;QAAI,WAAU;kBAEb,cAAA,8OAAC;YAAK,WAAU;sBACb;;;;;;;;;;;AAKT;uCAEe"}}]
+}

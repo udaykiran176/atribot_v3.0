@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/web%20apps/Atribot_3.0/atribot-robotics-academy/src/app/%28marketing%29/store/page.tsx"],"sourcesContent":["\r\nexport default function Store() {\r\n  return (\r\n    <div>\r\n      <h1>Store</h1>\r\n    </div>\r\n  );\r\n}   \r\n\r\n    "],"names":[],"mappings":";;;;;;AACe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV"}}]
+}

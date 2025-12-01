@@ -28,7 +28,9 @@ export const Navbar = ({
   }] : [{
     href: '/',
     label: 'Home'
-  }, {
+  },
+  {href : '/store', label: 'Store'},
+   {
     href: '/kit_activation',
     label: 'Activate Kit'
   }];
