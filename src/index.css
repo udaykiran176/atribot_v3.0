@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 50% 3%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 40% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 40% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 214 100% 59%;
+    --primary-foreground: 220 50% 3%;
+
+    --secondary: 160 89% 55%;
+    --secondary-foreground: 220 50% 3%;
+
+    --muted: 220 30% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 160 89% 55%;
+    --accent-foreground: 220 50% 3%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 30% 15%;
+    --input: 220 30% 15%;
+    --ring: 214 100% 59%;
+
+    --radius: 1rem;
+
+    /* Custom Atribot Colors */
+    --atribot-blue: 214 100% 59%;
+    --atribot-dark: 220 50% 3%;
+    --atribot-neon: 160 89% 55%;
+    --atribot-yellow: 45 100% 70%;
+    --atribot-purple: 270 80% 65%;
+    --atribot-cyan: 190 90% 60%;
+
+    /* Level Colors */
+    --level-1: 214 100% 59%;
+    --level-2: 160 89% 55%;
+    --level-3: 45 100% 70%;
+    --level-4: 270 80% 65%;
+    --level-5: 0 100% 65%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 40% 8%) 0%, hsl(220 40% 4%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.3) 0%, transparent 50%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(var(--primary) / 0.3);
+    --shadow-neon: 0 0 20px hsl(var(--secondary) / 0.5);
+    --shadow-card: 0 10px 40px -10px hsl(220 50% 0% / 0.5);
+
+    --sidebar-background: 220 40% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 214 100% 59%;
+    --sidebar-primary-foreground: 220 50% 3%;
+    --sidebar-accent: 220 30% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 30% 15%;
+    --sidebar-ring: 214 100% 59%;
+  }
+
+  .dark {
+    --background: 220 50% 3%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+  }
+}
+
+@layer components {
+  .glow-text {
+    @apply text-primary;
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  .glow-box {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .neon-border {
+    @apply border border-secondary/50;
+    box-shadow: 0 0 10px hsl(var(--secondary) / 0.3), inset 0 0 10px hsl(var(--secondary) / 0.1);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .level-badge {
+    @apply px-4 py-2 rounded-full font-semibold text-sm inline-flex items-center gap-2;
+  }
+
+  .level-1 {
+    @apply bg-primary/20 text-primary border border-primary/30;
+  }
+
+  .level-2 {
+    @apply bg-secondary/20 text-secondary border border-secondary/30;
+  }
+
+  .level-3 {
+    background: hsl(var(--atribot-yellow) / 0.2);
+    color: hsl(var(--atribot-yellow));
+    border: 1px solid hsl(var(--atribot-yellow) / 0.3);
+  }
+
+  .level-4 {
+    background: hsl(var(--atribot-purple) / 0.2);
+    color: hsl(var(--atribot-purple));
+    border: 1px solid hsl(var(--atribot-purple) / 0.3);
+  }
+
+  .level-5 {
+    background: hsl(var(--level-5) / 0.2);
+    color: hsl(var(--level-5));
+    border: 1px solid hsl(var(--level-5) / 0.3);
+  }
+
+  .robot-grid {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
