@@ -7,40 +7,38 @@ import { LEVELS, LevelId } from '@/lib/constants';
 import { Bot, Cpu, Lightbulb, Rocket, Users, Award, ArrowRight, Play, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import atribotLogo from '@/assets/atribot-logo.png';
-
-const features = [
-  {
-    icon: Bot,
-    title: 'Hands-On Learning',
-    description: 'Build real robots with our carefully designed STEM kits',
-  },
-  {
-    icon: Cpu,
-    title: 'Progressive Levels',
-    description: '5 levels from beginner to advanced robotics',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Video Lessons',
-    description: 'Step-by-step video tutorials for each project',
-  },
-  {
-    icon: Users,
-    title: 'For Kids 6-16',
-    description: 'Age-appropriate content that grows with your child',
-  },
-];
-
-const stats = [
-  { value: '10K+', label: 'Happy Students' },
-  { value: '50+', label: 'Projects' },
-  { value: '100+', label: 'Video Lessons' },
-  { value: '5', label: 'Skill Levels' },
-];
-
+const features = [{
+  icon: Bot,
+  title: 'Hands-On Learning',
+  description: 'Build real robots with our carefully designed STEM kits'
+}, {
+  icon: Cpu,
+  title: 'Progressive Levels',
+  description: '5 levels from beginner to advanced robotics'
+}, {
+  icon: Lightbulb,
+  title: 'Video Lessons',
+  description: 'Step-by-step video tutorials for each project'
+}, {
+  icon: Users,
+  title: 'For Kids 6-16',
+  description: 'Age-appropriate content that grows with your child'
+}];
+const stats = [{
+  value: '10K+',
+  label: 'Happy Students'
+}, {
+  value: '50+',
+  label: 'Projects'
+}, {
+  value: '100+',
+  label: 'Video Lessons'
+}, {
+  value: '5',
+  label: 'Skill Levels'
+}];
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
@@ -52,14 +50,18 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6
+          }}>
               <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
                 <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm text-primary font-medium">STEM Education for Kids</span>
+                <span className="text-sm text-primary font-medium">Robotics Education for Kids</span>
               </div>
               
               <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -90,19 +92,17 @@ const Index = () => {
             </motion.div>
 
             {/* Floating Robot */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="mt-12"
-            >
-              <motion.img 
-                src={atribotLogo} 
-                alt="Atribot Robot" 
-                className="w-32 h-32 mx-auto"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 3 }}
-              />
+            <motion.div initial={{
+            opacity: 0,
+            scale: 0.8
+          }} animate={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            delay: 0.3,
+            duration: 0.5
+          }} className="mt-12">
+              
             </motion.div>
           </div>
         </div>
@@ -112,20 +112,20 @@ const Index = () => {
       <section className="py-16 bg-card border-y border-border">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
+            {stats.map((stat, index) => <motion.div key={stat.label} initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: index * 0.1
+          }} className="text-center">
                 <div className="font-display text-4xl md:text-5xl font-bold glow-text mb-2">
                   {stat.value}
                 </div>
                 <div className="text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
         </div>
       </section>
@@ -133,11 +133,13 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
               Why Choose <span className="text-primary">Atribot</span>?
             </h2>
@@ -147,21 +149,21 @@ const Index = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-card border border-border rounded-2xl p-6 card-hover"
-              >
+            {features.map((feature, index) => <motion.div key={feature.title} initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: index * 0.1
+          }} className="bg-card border border-border rounded-2xl p-6 card-hover">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <feature.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm">{feature.description}</p>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
         </div>
       </section>
@@ -169,11 +171,13 @@ const Index = () => {
       {/* Levels Section */}
       <section className="py-20 bg-card/50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
               5 Levels of <span className="text-secondary">Discovery</span>
             </h2>
@@ -183,16 +187,17 @@ const Index = () => {
           </motion.div>
 
           <div className="grid gap-4 max-w-3xl mx-auto">
-            {(Object.keys(LEVELS) as LevelId[]).map((levelId, index) => (
-              <motion.div
-                key={levelId}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
+            {(Object.keys(LEVELS) as LevelId[]).map((levelId, index) => <motion.div key={levelId} initial={{
+            opacity: 0,
+            x: -20
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            delay: index * 0.1
+          }}>
                 <LevelCard level={levelId} isUnlocked={index < 2} />
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
 
           <div className="text-center mt-12">
@@ -211,10 +216,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            scale: 0.95
+          }} whileInView={{
+            opacity: 1,
+            scale: 1
+          }}>
               <Award className="w-16 h-16 text-primary mx-auto mb-6" />
               <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
                 Ready to Start Building?
@@ -236,8 +244,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
